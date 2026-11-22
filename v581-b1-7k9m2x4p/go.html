@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Открытие источника...</title>
+<script>
+(function(){
+  var q = new URLSearchParams(window.location.search);
+  var f = (q.get('f') || '').replace(/[^A-Za-z0-9_.-]/g, '');
+  var p = (q.get('p') || '1').replace(/[^0-9]/g, '') || '1';
+  if (f && f.endsWith('.pdf')) {
+    window.location.replace(f + '#page=' + p);
+  }
+})();
+</script>
+</head>
+<body style="font-family:sans-serif;padding:24px;color:#333;">Переход к источнику...</body>
+</html>
